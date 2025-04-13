@@ -1,0 +1,39 @@
+<template>
+        <lightning-card title="CURD Operations">
+
+                <lightning-button variant="brand" onclick={creatAccountHandle} label="Create"
+                        icon-name="utility:record_create"></lightning-button> &nbsp;
+                <lightning-button variant="brand" onclick={searchAccountHandle} label="Search"
+                        icon-name="utility:search"></lightning-button> &nbsp;
+                <lightning-button variant="brand-outline" onclick={updateAccountHandle} label="Update"
+                        icon-name="utility:edit"></lightning-button> &nbsp;
+                <lightning-button variant="destructive" onclick={deleteAccountHandle} label="Delec"
+                        icon-name="utility:delete"></lightning-button> &nbsp;
+                <!--crate button start-->
+                <template if:true={showCreatButton}>
+                        <lightning-input data-formfield="Acc" type="text" label="Enter Name"></lightning-input><br />
+                        <lightning-combobox name="Rating" label="rating" value={value} placeholder="Select Rating"
+                                options={ratingDataHandler} onchange={ratingCreateHandler}>
+                        </lightning-combobox><br />
+                        <lightning-button variant="success" label="save" onclick={createAccuntData}
+                                icon-name="utility:save"></lightning-button><br />
+                </template>
+                <!--Create button end-->
+                <!--Search buttor start-->
+                <lightning-input type="text" data-formfield="AccName" label="Enter Account Name"
+                        icon-name="utility:search"></lightning-input><br />
+                <lightning-button variant="Brand" label="search" onclick={fetchDataHandler}
+                        icon-name="utility:search"></lightning-button><br />
+                <lightning-input data-formfield="AccName" type="text" label="Enter Name"
+                        value={objAcc.Name}></lightning-input><br />
+                <lightning-input data-formfield="Rating1" type="text" label="Enter Name"
+                        value={objAcc.Rating}></lightning-input><br />
+
+
+
+
+        </lightning-card>
+
+
+
+</template>

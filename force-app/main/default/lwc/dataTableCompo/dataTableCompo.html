@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Account data Table">
+
+<lightning-input type="search" label="Enter value" data-formfield="Acc"></lightning-input> <br>
+<lightning-button variant="brand" onclick={searchDataHandler} icon-name="utility:search"></lightning-button><br>
+
+<lightning-datatable
+key-field="Id"
+data={accList}
+columns={columns}    
+draft-values={draftValues} 
+onrowselection={selectedRecordsHandler} >
+</lightning-datatable>
+
+    </lightning-card>
+    
+</template>

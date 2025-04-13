@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Application Form">
+    <div>  <lightning-input type="text" data-formfield="myname" label="Enter Your Name"></lightning-input> </div>
+    <div>  <lightning-input type="Date" data-formfield="DOB" label="Enter YoUR DOB"></lightning-input></div>
+    <div>  <lightning-input type="text" data-formfield="Email" label="Enter YoUR EmailId"></lightning-input></div>
+    <div>  <lightning-button variant="success" label="Success" title="Successful action"  onclick={getdataHandler} class="slds-m-left_x-small"></lightning-button>
+        You entered = {name}
+        DOB={dOB}
+        Email={emailId}
+    </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,49 @@
+<template>
+    <lightning-card title="Registration Form">
+        <div>
+            <lightning-input 
+                type="text" 
+                data-formfield="accname" 
+                label="Enter Account Name">
+            </lightning-input>
+        </div>
+        <br/>
+
+        <lightning-combobox
+            name="Rating"
+            label="Select Rating"
+            value={objAcc.Rating}
+            placeholder="Select any value"
+            options={selectRatingOptions}
+            onchange={createRatingHandler}>
+        </lightning-combobox>
+        <br/>
+
+        <lightning-combobox
+            name="SLA"
+            label="Select SLA"
+            value={objAcc.SLA__c}
+            placeholder="Select any value"
+            options={selectSlaOptions}
+            onchange={createSlaHandler}>
+        </lightning-combobox>
+        <br/>
+
+        <template if:true={flag}>
+            <div class="exampleHolder">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <div>
+            <lightning-button 
+                variant="Brand" 
+                icon-name="utility:save" 
+                label="Submit" 
+                onclick={accountDataHandler} 
+                class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+        <br/>
+    </lightning-card>
+</template>

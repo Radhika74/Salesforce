@@ -1,0 +1,31 @@
+<template>
+    <div>
+        <lightning-card title="🔍 Search Account" style="width: 450px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); text-align: center;">
+            
+            <!-- Input Field (Centered) -->
+            <div style="display: flex; justify-content: center;">
+                <lightning-input type="text" label="Enter Account Name" data-formfield="Acc"
+                    style="width: 90%; text-align: center;">
+                </lightning-input>
+            </div>
+
+            <!-- Search Button (Centered) -->
+            <div style="display: flex; justify-content: center; margin-top: 10px;">
+                <lightning-button variant="brand" label="🔍 Search" onclick={createDataHandler} 
+                    style="width: 70%; font-weight: bold; padding: 8px; font-size: 16px;">
+                </lightning-button>
+            </div>
+
+            <!-- Account Details (Centered) -->
+            <div style="margin-top: 20px; padding: 15px; background-color: #f9f9f9; border-radius: 8px; text-align: center;">
+                <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 8px;">Account Details</p>
+                <p><strong>📌 Name:</strong> {objAcc.Name}</p>
+                <p><strong>⭐ Rating:</strong> {objAcc.Rating}</p>
+                <p><strong>🏢 Type:</strong> {objAcc.Type}</p>
+                <p><strong>⚡ SLA:</strong> {objAcc.SLA__c}</p>
+            </div>
+            
+        </lightning-card>
+    </div>
+</template>
+
