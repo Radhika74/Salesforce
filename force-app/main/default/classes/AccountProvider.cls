@@ -19,7 +19,6 @@ public with sharing class AccountProvider {
         } catch (Exception e) {
             throw new AuraHandledException('Error fetching account: ' + e.getMessage());
         }
-    
     }
     @AuraEnabled
         public static List<Account> fatchData(){
@@ -38,6 +37,4 @@ public with sharing class AccountProvider {
         throw new AuraHandledException(e.getMessage());
     }
 }
-
 }
-
